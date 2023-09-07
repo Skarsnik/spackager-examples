@@ -38,7 +38,7 @@ jobs:
               SQPackager --build windows
       -
         name: print output
-         run: |
-               echo "Standalone zip : ${{steps.build.outputs.sqpackager_win32_x64_standalone_zip}}"
-               echo "Standalone 7zip : ${{steps.build.outputs.sqpackager_win32_x64_standalone_7zip}}"
-               echo "Innosetup Installer : ${{steps.build.outputs.sqpackager_win32_x64_innosetup}}"
+        run: |
+              echo "Standalone zip : ${{steps.build.outputs.sqpackager_win32_x64_standalone_zip}}"
+              echo "Standalone 7zip : ${{steps.build.outputs.sqpackager_win32_x64_standalone_7zip}}"
+              echo "Innosetup Installer : ${{steps.build.outputs.sqpackager_win32_x64_innosetup}}"
