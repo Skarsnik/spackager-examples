@@ -1,0 +1,13 @@
+{
+    "name" : "BasicApp",
+    "pro-file" : "basic-console-app.pro",
+    "org" : "fr.nyo",
+    "short-description" : "A console app that do nothing",
+    "description" : "A console app that do nothing, whom sole purpose is to test sqpackager",
+    "qt-major-version" : "qt6",
+    "icon" : "GuiliGuili.ico",
+    "desktop-categories" : ["Utility"],
+    "files" : {
+        "main.cpp" : "main.cpp",
+    }
+}
