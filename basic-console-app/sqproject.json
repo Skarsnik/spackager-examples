@@ -5,7 +5,7 @@
     "short-description" : "A console app that do nothing",
     "description" : "A console app that do nothing, whom sole purpose is to test sqpackager",
     "qt-major-version" : "qt6",
-    "icon" : "GuiliGuili.ico",
+    "icon" : "GuiliGuili.png",
     "desktop-categories" : ["Utility"],
     "files" : {
         "main.cpp" : "main.cpp"
