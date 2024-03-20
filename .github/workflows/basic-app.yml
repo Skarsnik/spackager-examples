@@ -12,7 +12,7 @@ on:
   workflow_dispatch:
 
 jobs:
-  compile:
+  buildwindows:
     runs-on: windows-latest
     steps:
       - uses: ilammy/msvc-dev-cmd@v1
@@ -43,3 +43,29 @@ jobs:
               echo "Standalone zip : ${{steps.build.outputs.sqpackager_win32_x64_standalone_zip}}"
               echo "Standalone 7zip : ${{steps.build.outputs.sqpackager_win32_x64_standalone_7zip}}"
               echo "Innosetup Installer : ${{steps.build.outputs.sqpackager_win32_x64_innosetup}}"
+  builddebian:
+    runs-on: ubuntu-latest
+    steps:
+      -
+        name: Checkout
+        uses: actions/checkout@v2
+        with:
+          submodules : true
+      -
+        name: Install Qt
+        run: |
+              sudo apt-get install qt6-base-dev
+      -
+        name: Install SPackager
+        uses: Skarsnik/sqpackager-action@main
+      -
+        name: build
+        id: build
+        run: |
+              cd basic-console-app
+              SQPackager --gen-debian --build debian
+      -
+        name: print output
+        run: |
+              echo "Debian Package : ${{steps.build.outputs.sqpackager_amd64_deb}}"
+
