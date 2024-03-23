@@ -52,16 +52,13 @@ jobs:
         with:
           submodules : true
       -
-        name: Install Qt
-        run: |
-              sudo apt-get install qt6-base-dev
-      -
         name: Install SPackager
         uses: Skarsnik/sqpackager-action@main
       -
         name: build
         id: build
         run: |
+              sudo SQPackager --prepare debian
               cd basic-console-app
               SQPackager --gen-debian --build debian
       -
