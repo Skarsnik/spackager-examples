@@ -58,8 +58,8 @@ jobs:
         name: build
         id: build
         run: |
-              sudo SQPackager --prepare debian
               cd basic-console-app
+              sudo SQPackager --prepare debian 
               SQPackager --gen-debian --build debian
       -
         name: print output
