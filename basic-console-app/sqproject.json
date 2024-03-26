@@ -6,7 +6,7 @@
     "author" : "Sylvain Colinet",
     "author-mail" : "scolinet@gmail.com",
     "description" : "A console app that do nothing, whom sole purpose is to test sqpackager",
-    "qt-major-version" : "qt6",
+    "qt-major-version" : "6",
     "icon" : "GuiliGuili.png",
     "desktop-categories" : ["Utility"],
     "files" : {
